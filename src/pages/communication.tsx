@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, Plus, Calendar, Share, Info, Star } from "lucide-react";
+import { ArrowLeft, Plus, Calendar, Share, Info, } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
