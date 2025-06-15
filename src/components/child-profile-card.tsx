@@ -7,7 +7,7 @@ interface ChildProfileCardProps {
 }
 
 export function ChildProfileCard({ child, recentLogs = [] }: ChildProfileCardProps) {
-  const initials = child.name.split(" ").map(n => n[0]).join("");
+  const initials = child.name.split(" ").map((n: string) => n[0]).join("");
   
   // Calculate today's summary
   const today = new Date().toDateString();
