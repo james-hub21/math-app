@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== CUSTOM COMPONENTS LAYER ========== */
+@layer components {
+  .card {
+    @apply bg-white rounded-xl shadow p-5 mb-4 border;
+    border-color: var(--border);
+    transition: var(--transition);
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+  }
+
+  .button {
+    @apply inline-block text-center font-medium py-3 px-5 rounded-lg transition;
+  }
+
+  .button-primary {
+    @apply text-white;
+    background-color: var(--primary);
+  }
+
+  .button-primary:hover {
+    background-color: #4338ca;
+  }
+
+  .button-secondary {
+    @apply text-white;
+    background-color: var(--secondary);
+  }
+
+  .button-secondary:hover {
+    background-color: #059669;
+  }
+
+  .button-outline {
+    @apply border text-gray-800 bg-white;
+  }
+
+  .button-outline:hover {
+    background-color: #f3f4f6;
+  }
+
+  .quick-grid {
+    @apply grid grid-cols-2 gap-4;
+  }
+
+  .quick-action {
+    @apply text-center p-4 border rounded-xl shadow bg-white transition;
+  }
+
+  .quick-action:hover {
+    transform: translateY(-2px);
+    background-color: #f9fafc;
+  }
+
+  .quick-icon {
+    @apply mx-auto mb-2 flex items-center justify-center text-xl;
+    width: 3rem;
+    height: 3rem;
+    background: #eef2ff;
+    color: var(--primary);
+    border-radius: 0.75rem;
+  }
+
+  .quick-text {
+    @apply font-medium text-sm;
+  }
+
+  .quick-sub {
+    @apply text-xs text-gray-500;
+  }
+
+  .child-card {
+    @apply flex items-center p-4 rounded-xl shadow bg-white border;
+  }
+
+  .child-avatar {
+    @apply flex items-center justify-center font-bold text-base mr-4;
+    width: 3rem;
+    height: 3rem;
+    background: #dbeafe;
+    color: var(--primary);
+    border-radius: 9999px;
+  }
+
+  .child-info h4 {
+    @apply font-semibold text-base m-0;
+  }
+
+  .child-info p {
+    @apply text-xs text-gray-500 mt-1;
+  }
+
+  .spinner-overlay {
+    @apply fixed inset-0 z-[9999] flex items-center justify-center;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .spinner {
+    @apply rounded-full;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 4px solid #c7d2fe;
+    border-top: 4px solid var(--primary);
+    animation: spin 0.9s linear infinite;
+  }
+
+  .toaster {
+    @apply fixed bottom-4 left-1/2 text-white text-sm px-4 py-2 rounded-lg shadow z-[999];
+    background: var(--text-main);
+    transform: translateX(-50%);
+  }
+}
+
+/* ========== BASE HTML STYLES ========== */
+:root {
+  --primary: #4f46e5;
+  --secondary: #10b981;
+  --accent: #f59e0b;
+  --background: #f9fafb;
+  --text-main: #1f2937;
+  --text-light: #6b7280;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --radius: 1rem;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --transition: 0.3s ease;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--background);
+  color: var(--text-main);
+}
+
+/* ========== HEADINGS ========== */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+/* ========== ANIMATIONS ========== */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
